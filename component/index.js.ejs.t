@@ -6,9 +6,9 @@ import classNames from "classnames/bind";
 
 import style from "./index.module.scss";
 
-function <%= name %>({ className }) {
-  const cn = classNames.bind(style);
+const cn = classNames.bind(style);
 
+function <%= name %>({ className }) {
   return <div className={cn("wrapper", className)}><%= name %></div>;
 }
 
