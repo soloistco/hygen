@@ -3,12 +3,11 @@ to: <%= absPath %>/index.js
 ---
 import PropTypes from "prop-types";
 import classNames from "classnames/bind";
+import styles from "./index.module.scss";
 
-import style from "./index.module.scss";
+const cn = classNames.bind(styles);
 
-const cn = classNames.bind(style);
-
-function <%= name %>({ className }) {
+export default function <%= name %>({ className }) {
   return <div className={cn("wrapper", className)}><%= name %></div>;
 }
 
@@ -19,5 +18,3 @@ function <%= name %>({ className }) {
 <%= name %>.defaultProps = {
   className: "",
 };
-
-export default <%= name %>;
