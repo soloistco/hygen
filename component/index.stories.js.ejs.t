@@ -17,7 +17,7 @@ export default {
   },
 };
 
-const Template = args => <<%= name %> {...args} />;
+const Template = (args) => <<%= name %> {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {};
