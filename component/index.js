@@ -19,7 +19,7 @@ module.exports = {
       },
     ];
 
-    return inquirer.prompt(questions).then(answers => {
+    return inquirer.prompt(questions).then((answers) => {
       const { category, name, dir } = answers;
       const categoryPath = `src/components/${category}`;
       const componentDir = dir ? `${dir}/` : "";
