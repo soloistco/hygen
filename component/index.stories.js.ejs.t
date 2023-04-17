@@ -11,10 +11,13 @@ export default {
   },
   parameters: {
     layout: "centered",
+    backgrounds: {
+      default: "light",
+    },
   },
 };
 
-const Template = args => <<%= name %> {...args} />;
+const Template = (args) => <<%= name %> {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {};
