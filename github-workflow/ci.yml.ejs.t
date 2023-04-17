@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/.github/workflows/ci.yml
+to: <%= path %>/ci.yml
 ---
 name: CI
 
@@ -8,9 +8,7 @@ on:
     branches: [develop, main]
 
 env:
-  NEXT_PUBLIC_BASEURL: http://localhost:3000
-  SHOPIFY_API_URL: ${{secrets.SHOPIFY_API_URL}}
-  SHOPIFY_ACCESS_TOKEN: ${{secrets.SHOPIFY_ACCESS_TOKEN}}
+  NEXT_PUBLIC_BASEURL: <%= baseurl %>
   CMS_URL: ${{secrets.CMS_URL}}
   CMS_PUBLISHED_TOKEN: ${{secrets.CMS_PUBLISHED_TOKEN}}
   CMS_PREVIEW_SECRET: ${{secrets.CMS_PREVIEW_SECRET}}
@@ -48,9 +46,10 @@ jobs:
 
       - name: 🛠 Build Project
         run: npm run build
-
+<% if(release){ -%>
       - name: 🔖 Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
+<% } -%>

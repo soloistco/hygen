@@ -1,5 +1,6 @@
 ---
-to: .github/workflows/release.yml
+to: <%= path %>/release.yml
+to: "<%= release ? `where/to/render/${name}.js` : null %>"
 ---
 name: Notify on Release
 on:
