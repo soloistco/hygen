@@ -8,13 +8,11 @@ import style from "./index.module.scss";
 
 const cn = classNames.bind(style);
 
-interface Props extends HTMLAttributes<HTMLElement> {
-  className: string
-  children: ReactNode | ReactNode[]
-};
+export interface Props extends HTMLAttributes<HTMLElement> {
+  className?: string | undefined;
+  children?: ReactNode | ReactNode[] | null;
+}
 
-const <%= name %>: FC<Props> = ({ className, children }) => {
+export const <%= name %>: FC<Props> = ({ className, children }) => {
   return <div className={cn("wrapper", className)}>{children}</div>;
 };
-
-export default <%= name %>;
