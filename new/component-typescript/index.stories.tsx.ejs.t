@@ -1,5 +1,5 @@
 ---
-to: <%= absPath %>/index.stories.ts
+to: <%= absPath %>/index.stories.tsx
 ---
 import <%= name %> from "./index";
 
