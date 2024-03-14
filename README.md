@@ -4,7 +4,7 @@ This repo contains templates for Hygen.
 
 #### Clone the repo
 
-Clone the repo in your `__templates/new` directory.
+Clone the repo in your `__templates` directory.
 
 #### Installation
 
@@ -15,13 +15,13 @@ npm i -g hygen
 #### Generate a component
 
 ```sh
-hygen new component
+hygen react comp-module-ts
 ```
 
 #### Debug
 
 ```sh
-hygen new component --dry
+hygen react comp-module-ts --dry
 ```
 
 For more please visit [hygen](https://www.hygen.io/ "hygen").

@@ -1,9 +1,10 @@
 ---
-to: <%= absPath %>/index.js
+to: <%= absPath %>/<%= name %>.js
 ---
 import PropTypes from "prop-types";
 import classNames from "classnames/bind";
-import styles from "./index.module.scss";
+
+import styles from "./<%= name %>.module.scss";
 
 const cn = classNames.bind(styles);
 

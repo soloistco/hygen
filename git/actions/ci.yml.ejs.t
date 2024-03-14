@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0 # 👈 Required to retrieve git history for Chromatic
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 18.x.x
 
       - name: 📦 Cache node_modules & .next files
         uses: actions/cache@v3

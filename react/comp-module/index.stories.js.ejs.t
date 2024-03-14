@@ -1,7 +1,7 @@
 ---
-to: <%= absPath %>/index.stories.js
+to: <%= absPath %>/<%= name %>.stories.js
 ---
-import <%= name %> from "./index";
+import { <%= name %> } from "./<%= name %>";
 
 export default {
   title: "<%= category %>/<%= name %>",

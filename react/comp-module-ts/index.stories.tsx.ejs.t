@@ -1,8 +1,8 @@
 ---
-to: <%= absPath %>/index.stories.tsx
+to: <%= absPath %>/<%= name %>.stories.tsx
 ---
 import { StoryFn, Meta } from "@storybook/react";
-import { <%= name %> } from "./index";
+import { <%= name %> } from "./<%= name %>";
 
 export default {
   title: "<%= category %>/<%= name %>",
