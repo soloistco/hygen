@@ -6,17 +6,18 @@ import { <%= name %> } from "./<%= name %>";
 
 export default {
   title: "<%= category %>/<%= name %>",
-  component: Test,
+  component: <%= name %>,
   args: {
     className: "custom-class",
     children: "Hello World!",
   },
   parameters: {
-    layout: "fullscreen",
+    layout: "centered",
   },
-} as Meta;
+  tags: ['autodocs'],
+} satisfies Meta<typeof <%= name %>>;
 
-const Template: StoryFn<typeof Test> = (args) => <Test {...args} />;
+const Template: StoryFn<typeof <%= name %>> = (args) => <<%= name %> {...args} />;
 
 export const Basic = Template.bind({});
 Basic.args = {};

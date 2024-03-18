@@ -9,8 +9,8 @@ import { Props } from "./<%= name %>.types";
 
 const cn = classNames.bind(style);
 
-export const <%= name %>: FC<Props> = ({ className, children }) => {
+const <%= name %>: FC<Props> = ({ className, children }) => {
   return <div className={cn("wrapper", className)}>{children}</div>;
 };
 
-export { Props as <%= name %>Props };
+export { <%= name %>, type Props as <%= name %>Props };
